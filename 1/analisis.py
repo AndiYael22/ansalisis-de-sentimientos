@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
 # Crea un cursor para realizar consultas
 cursor = mydb.cursor()
 # Consulta los tweets con el hashtag que quieres analizar
-hashtag = "#Shakira"
+hashtag = "*"
 query = f"SELECT tweet FROM tweets WHERE hashtags LIKE '%{hashtag}%'"
 cursor.execute(query)
 tweets = cursor.fetchall()

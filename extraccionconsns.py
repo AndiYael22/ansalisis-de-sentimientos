@@ -16,7 +16,7 @@ for i, tweet in enumerate(sntwitter.TwitterSearchScraper('suicidio').get_items()
     tweets_container.append([tweet.id, tweet.user.username, tweet.date, tweet.content, [hashtag.name for hashtag in tweet.hashtags]])
 # Creamos un dataframe apartir de la lista
 tweets_df = pd.DataFrame(tweets_container, columns=["id", "username", "date", "tweet", "hashtags"])
-# Conexión a la BD
+#Conexión a la BD
 mysql_conn = mysql.connector.connect(host=mysql_host, user=mysql_user, password=mysql_password, database=mysql_database)
 mysql_cursor = mysql_conn.cursor()
 # Inserción de datos de los tweets en la BD
